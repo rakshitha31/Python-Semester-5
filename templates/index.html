@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head><h1>ATM</h1></head><br><br><br>
+<body>
+	<h3>Your Balance: {{balance}}</h3>
+	<h4>{{msg}}</h4>
+	<form action:"{{url_for('index')}}" id="atm" method="POST">
+		Amount: <input type="number" name="amount" required><br><br>
+		<input type="submit" name="action" value="Withdraw" onclick="return validateForm(this)"/>
+		<input type="submit" name="action" value="Deposit" onclick="return validateForm(this)"/>
+	</from>
+	<script>
+		function validateForm(button){
+		var form = document.getElementById("atm");
+			if(form.amount.value==" "){
+					alert("Amount can't be empty");
+					return false;
+				}
+			if(form.amount.value<0){
+					alert("Amount can't be negative");
+					return false;
+				}
+			if(button.value="Withdraw" && form.amount.value>50000){
+					alert("Withdraw limit:40000");
+					return false;
+				}
+}
+</script>
+
+</body>
+</html>
+

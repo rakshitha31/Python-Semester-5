@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+<h1>Calculator!</h1>
+<br>
+<br
+<h3>Enter operands in the box and select the operation to perform</h3><br><br>
+<input type="number" id="num1"><br>
+<input type="number" id="num2"><br><br>
+<script type="text/javascript" src="calc.js"></script>
+<form>
+<input type="radio"  name="operate" value="Add" id="add">Add<br>
+<input type="radio"  name="operate" value="Subtract" id="sub">Subtract<br>
+<input type="radio"  name="operate" value="Multiply" id="mul">Multiply<br>
+<input type="radio"  name="operate" value="Divide" id="div">Divide<br>
+
+</form>
+
+<input type="submit" value="Submit" onclick="calculate()">
+Answer: <span id="ans"></span>
+
+</html>

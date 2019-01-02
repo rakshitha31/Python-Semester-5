@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<table border="1">
+		<tr>
+			<th>Name</th><th>Country</th><th>Title</th><th>Year</th>
+		</tr>
+		<tr>
+			<td id="a1"></td><td id="c1"></td><td id="t1"></td><td id="y1"></td>
+		</tr>
+		<tr>
+			<td id="a2"></td><td id="c2"></td><td id="t2"></td><td id="y2"></td>
+		</tr>			
+	</table>
+	<span id="a3"></span> <span id="c3"></span> <span id="t3"></span> <span id="y3"></span><br>
+	<span id="a4"></span> <span id="c4"></span> <span id="t4"></span> <span id="y4"></span><br>
+</body>
+<script src="auth.json"></script>
+<script type="text/javascript">
+	var x = JSON.parse(x);
+	document.getElementById('a1').innerHTML = x.a1.nam;
+	document.getElementById('c1').innerHTML = x.a1.con;
+	document.getElementById('t1').innerHTML = x.a1.title;
+	document.getElementById('y1').innerHTML = x.a1.year;
+	document.getElementById('a2').innerHTML = x.a2.nam;
+	document.getElementById('c2').innerHTML = x.a2.con;
+	document.getElementById('t2').innerHTML = x.a2.title;
+	document.getElementById('y2').innerHTML = x.a2.year;
+	document.getElementById('a3').innerHTML = x.a3.nam;
+	document.getElementById('c3').innerHTML = x.a3.con;
+	document.getElementById('t3').innerHTML = x.a3.title;
+	document.getElementById('y3').innerHTML = x.a3.year;
+	document.getElementById('a4').innerHTML = x.a4.nam;
+	document.getElementById('c4').innerHTML = x.a4.con;
+	document.getElementById('t4').innerHTML = x.a4.title;
+	document.getElementById('y4').innerHTML = x.a4.year;  	
+</script>
+</html>
