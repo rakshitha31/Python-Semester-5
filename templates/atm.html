@@ -11,18 +11,18 @@
 	<input type="submit" name="action" value="Withdraw" onclick="validateForm(this)"/><br>
 	<input type="submit" name="action" value="Deposit" onclick="validateForm(this)"/><br>
 	</form>
-<script type="text/javascript">
+<script>
 function validateForm(button){
 	var form=document.getElementById("atm");
-	if(form.amount.value===0){
+	if(form.amount.value==" "){
 		alert('Amount cannot be empty');
 		return false
 	}
-	if(form.amount.value<0){
+	if(parseInt(form.amount.value)<0){
 		alert('Amount cannot be negative');
 		return false
 	}	
-	if(button.value==="Withdraw" && form.amount.value>5000){
+	if(button.value=="Withdraw" && parseInt(form.amount.value)>5000){
 		alert('Cannot withdraw more than 5000');
 		return false
 	}
